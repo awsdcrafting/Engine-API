@@ -1,9 +1,10 @@
 package eu.scisneromam.engine.api.datastructure
 
+import kotlinx.serialization.Serializable
 import java.util.*
-import javax.naming.ldap.UnsolicitedNotification
 
-abstract class Attribut protected constructor(
+@Serializable
+abstract class Attribute protected constructor(
     val type: Type,
     val subType: SubType
 )
@@ -67,12 +68,12 @@ abstract class Attribut protected constructor(
      */
     abstract override fun toString(): String
 
-    open fun listGetValueByIndex(index : Int) : Attribut
+    open fun listGetValueByIndex(index : Int) : Attribute
     {
         throw UnsupportedOperationException("listGetValueByIndex(index) is not supported!")
     }
 
-    open fun listSetValueByIndex(index : Int, value : Attribut)
+    open fun listSetValueByIndex(index : Int, value : Attribute)
     {
         throw UnsupportedOperationException("listSetValueByIndex(index, value) is not supported!")
     }
@@ -83,22 +84,22 @@ abstract class Attribut protected constructor(
         throw UnsupportedOperationException("listAddValue(value) is not supported!")
     }
 
-    open fun listRemoveValueByIndex(index : Int) : Attribut
+    open fun listRemoveValueByIndex(index : Int) : Attribute
     {
         throw UnsupportedOperationException("listRemoveValueByIndex(index) is not supported!")
     }
 
-    open fun containerGetAttributeByName(name : String) : Optional<Attribut>
+    open fun containerGetAttributeByName(name : String) : Optional<Attribute>
     {
         throw UnsupportedOperationException("containerGetAttributeByName(name) is not supported!")
     }
 
-    open fun containerSetAttribute(name : String,  attribut: Attribut) : Optional<Attribut>
+    open fun containerSetAttribute(name : String, attribute: Attribute) : Optional<Attribute>
     {
         throw UnsupportedOperationException("containerSetAttribute(name, attribute) is not supported!")
     }
 
-    open fun containerRemoveAttributeByName(name : String) : Optional<Attribut>
+    open fun containerRemoveAttributeByName(name : String) : Optional<Attribute>
     {
         throw UnsupportedOperationException("containerRemoveAttributeByName(name) is not supported!")
     }
