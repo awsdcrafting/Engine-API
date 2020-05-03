@@ -7,7 +7,7 @@ import java.util.*
 @Serializable
 @Polymorphic
 abstract class Attribute protected constructor(
-    val type: Type,
+    val dataType: Type,
     val subType: SubType
 )
 {
