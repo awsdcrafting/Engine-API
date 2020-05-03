@@ -1,11 +1,7 @@
-package eu.scisneromam.engine.api.datastructure
+package eu.scisneromam.engine.api.v0.datastructure
 
-import kotlinx.serialization.Polymorphic
-import kotlinx.serialization.Serializable
 import java.util.*
 
-@Serializable
-@Polymorphic
 abstract class Attribute protected constructor(
     val dataType: Type,
     val subType: SubType

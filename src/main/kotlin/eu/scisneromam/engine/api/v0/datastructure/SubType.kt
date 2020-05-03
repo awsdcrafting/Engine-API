@@ -1,4 +1,4 @@
-package eu.scisneromam.engine.api.datastructure
+package eu.scisneromam.engine.api.v0.datastructure
 
 enum class SubType
 {
